@@ -1,17 +1,11 @@
 import React from "react";
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts"
 
-
-let data = [
-    {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
-
-];
-
 class Binomial extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {x: 0, n: 0, r: 0};
+        this.state = {x: 0, n: 0, r: 0, data: [{name: 'Page A', uv: 4000, pv: 2400, amt: 2400}]};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.barChartElement = React.createRef();
@@ -23,12 +17,19 @@ class Binomial extends React.Component {
     }
 
 
+    componentDidCatch(error, errorInfo) {
+        window.console.log(error);
+        window.console.log(errorInfo);
+    }
+
     handleSubmit(event) {
         let newR = this.state.x * this.state.n;
         this.setState({'r': newR});
-        data.push({name: 'Page G', uv: 3490, pv: 4300, amt: 2100});
-        window.console.log(data);
-        this.barChartElement.data = data;
+        let newData = [...this.state.data];
+        window.console.log(newData);
+        // newData[0].pv = newData[0].pv * 2;
+        newData.push({name: 'Page A', uv: 4000, pv: 5400, amt: 4400});
+        this.setState({data: newData});
         event.preventDefault();
     }
 
@@ -48,7 +49,7 @@ class Binomial extends React.Component {
                     <input type="submit" value="Submit"/>
                 </form>
                 <p>{this.state.r}</p>
-                <BarChart width={600} height={300} data={data}
+                <BarChart width={600} height={300} data={this.state.data}
                           margin={{top: 5, right: 30, left: 20, bottom: 5}}
                           ref={this.barChartElement}>
                     <CartesianGrid strokeDasharray="3 3"/>

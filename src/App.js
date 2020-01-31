@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
-import SideBarItem from './model/model';
-import Sidebar from "./Sidebar";
-import Binomial from "./probabilities/Binomial"
+import Binomial from "./distributions/Binomial"
 
-const items = [new SideBarItem("bernulli", "Bernulli")];
+// const items = [new SideBarItem("bernulli", "Bernulli")];
 
 class App extends React.Component {
 
