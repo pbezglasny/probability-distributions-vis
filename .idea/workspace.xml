@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="">
+    <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="Added nav bar.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/distributions/Binomial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/Binomial.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +83,7 @@
       <updated>1579033901713</updated>
       <workItem from="1579033903564" duration="2051000" />
       <workItem from="1580409680498" duration="7117000" />
-      <workItem from="1580460741496" duration="5562000" />
+      <workItem from="1580460741496" duration="7522000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1579034672187</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580464147328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added nav bar.">
+      <created>1580471913212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580471913212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +123,8 @@
     <MESSAGE value="Update git ignore" />
     <MESSAGE value="Fix adding new elements to data." />
     <MESSAGE value="Added binomial distribution." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added binomial distribution." />
+    <MESSAGE value="Added nav bar." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added nav bar." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="281" width="691" height="561" key="#com.intellij.ide.util.MemberChooser" timestamp="1580470482186">
@@ -127,10 +132,14 @@
     </state>
     <state x="628" y="281" width="691" height="561" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1580470482186" />
     <state x="3036" y="450" width="384" height="564" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580413058563" />
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580464147190">
+    <state x="279" y="132" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1580474224952">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580464147190" />
+    <state x="279" y="132" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1440.900@0.0.1440.900" timestamp="1580474224952" />
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580474917774">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580474917774" />
     <state x="2798" y="329" width="860" height="807" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1579034672123" />
     <state width="1419" height="481" key="GridCell.Tab.0.bottom" timestamp="1580461153598">
       <screen x="0" y="0" width="1440" height="900" />
@@ -156,10 +165,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580414151378" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580464149661">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580471917949">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580464149661" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580471917949" />
     <state x="3001" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580411555049">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
