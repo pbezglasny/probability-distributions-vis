@@ -12,13 +12,11 @@ function nChooseK(n, k) {
     return res;
 }
 
-//{name:k, prob:p}
-
 class Binomial extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {p: 0, n: 0, r: 0, data: []};
+        this.state = {p: 0.5, n: 5, data: []};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.barChartElement = React.createRef();
@@ -30,22 +28,22 @@ class Binomial extends React.Component {
     }
 
 
-    componentDidCatch(error, errorInfo) {
-        window.console.log(error);
-        window.console.log(errorInfo);
+    componentDidMount() {
+        this.drawChart();
     }
 
-    handleSubmit(event) {
-        let newR = this.state.p * this.state.n;
-        this.setState({'r': newR});
+    drawChart() {
         let newData = [];
-        window.console.log(newData);
         for (let k = 1; k <= this.state.n; k++) {
             let choose = nChooseK(this.state.n, k);
             let binProb = choose * Math.pow(this.state.p, k) * Math.pow(1 - this.state.p, this.state.n - k);
             newData.push({'name': k.toString(), 'binProb': binProb});
         }
         this.setState({data: newData});
+    }
+
+    handleSubmit(event) {
+        this.drawChart();
         event.preventDefault();
     }
 
@@ -72,7 +70,7 @@ class Binomial extends React.Component {
                     <YAxis/>
                     <Tooltip/>
                     <Legend/>
-                    <Bar dataKey="binProb" fill="#8884d8"/>
+                    <Bar dataKey="binProb" name="Probability" fill="#8884d8"/>
                 </BarChart>
             </div>
         );
