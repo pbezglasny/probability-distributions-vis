@@ -1,7 +1,9 @@
 import React from "react";
 import {Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis} from "recharts"
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import {formStyles} from "../styles/form-styles";
+import {withStyles} from '@material-ui/core/styles';
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 function nChooseK(n, k) {
     let res = 1;
@@ -52,28 +54,17 @@ class Binomial extends React.Component {
     }
 
     render() {
+        const {classes} = this.props;
         return (
             <div>
                 <div>
-                    <Form onSubmit={this.handleSubmit}>
-                        <Form.Group controlId="binom_p">
-                            <Form.Label>Probability of success in one trial:</Form.Label>
-                            <Form.Control type="input" placeholder="values from 0 to 1"
-                                          size="sm"
-                                          value={this.state.binom_p}
-                                          onChange={this.handleChange}/>
-                        </Form.Group>
-                        <Form.Group controlId="binom_n">
-                            <Form.Label>Num of trials:</Form.Label>
-                            <Form.Control type="input" placeholder="values greater than 0"
-                                          size="sm"
-                                          value={this.state.binom_n}
-                                          onChange={this.handleChange}/>
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
+                    <form className={classes.form_root} noValidate autoComplete="off">
+                        <TextField id="binom_p" type="number" label="Probability of success in one trial"
+                                   value={this.state.binom_p} onChange={this.handleChange}/>
+                        <TextField id="binom_n" type="number" label="Num of trials"
+                                   value={this.state.binom_n} onChange={this.handleChange}/>
+                        <Button variant="contained" onClick={this.handleSubmit}>Submit</Button>
+                    </form>
                 </div>
                 <BarChart width={600} height={300} data={this.state.data}
                           margin={{top: 5, right: 30, left: 20, bottom: 5}}
@@ -90,4 +81,4 @@ class Binomial extends React.Component {
     }
 }
 
-export default Binomial;
+export default withStyles(formStyles)(Binomial);
