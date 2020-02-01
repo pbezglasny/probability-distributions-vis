@@ -53,7 +53,7 @@ class DiscreteDistribution extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <div>
+                <div style={{paddingLeft: 80, paddingTop: 30, width: '100%'}}>
                     <form className={classes.form_root} noValidate autoComplete="off">
                         {this.props.defaultParams.map(param =>
                             <TextField key={param.name}
@@ -64,11 +64,12 @@ class DiscreteDistribution extends React.Component {
                                        error={!this.state.params[param.name].isValid.valid}
                                        helperText={this.state.params[param.name].isValid.valid ? "" :
                                            this.state.params[param.name].isValid.message}
-                            />)}
+                            />
+                        )}
                         <br/>
                         <Button variant="contained"
                                 onClick={() => this.drawChart()}
-                                disabled={!this.isAllParamValid()}>Submit</Button>
+                                disabled={!this.isAllParamValid()}>Calculate</Button>
                     </form>
                 </div>
                 <div className={classes.grid_root}>

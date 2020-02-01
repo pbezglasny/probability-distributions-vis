@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/distributions/discrete-distribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/discrete-distribution.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +84,7 @@
       <workItem from="1579033903564" duration="2051000" />
       <workItem from="1580409680498" duration="7117000" />
       <workItem from="1580460741496" duration="9482000" />
-      <workItem from="1580497261018" duration="28585000" />
+      <workItem from="1580497261018" duration="29887000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1579034672187</created>
@@ -192,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580591175985</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Change default style.">
+      <created>1580592527064</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1580592527065</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +219,8 @@
     <MESSAGE value="Added geometric distribution." />
     <MESSAGE value="Added negative binomial." />
     <MESSAGE value="Fix negative binomial distr." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix negative binomial distr." />
+    <MESSAGE value="Change default style." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change default style." />
   </component>
   <component name="WindowStateProjectService">
     <state x="355" y="224" width="917" height="621" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1580580680286">
@@ -233,27 +240,27 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1580578176570" />
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580591175813">
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580592526664">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580591175813" />
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580592526664" />
     <state x="2798" y="329" width="860" height="807" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1579034672123" />
-    <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580592084328">
+    <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580592529040">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580592084328" />
-    <state width="1419" height="239" key="GridCell.Tab.0.center" timestamp="1580592084326">
+    <state width="1419" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580592529040" />
+    <state width="1419" height="239" key="GridCell.Tab.0.center" timestamp="1580592529039">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580592084326" />
-    <state width="1419" height="239" key="GridCell.Tab.0.left" timestamp="1580592084325">
+    <state width="1419" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580592529039" />
+    <state width="1419" height="239" key="GridCell.Tab.0.left" timestamp="1580592529037">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580592084325" />
-    <state width="1419" height="239" key="GridCell.Tab.0.right" timestamp="1580592084327">
+    <state width="1419" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580592529037" />
+    <state width="1419" height="239" key="GridCell.Tab.0.right" timestamp="1580592529039">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580592084327" />
+    <state width="1419" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580592529039" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1580501543930">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -319,10 +326,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3001" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580411555049" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1580497837199">
+    <state width="600" height="424" key="javadoc.popup" timestamp="1580593554455">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1580497837199" />
+    <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1580593554455" />
     <state x="385" y="189" width="670" height="740" key="search.everywhere.popup" timestamp="1580576282948">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
