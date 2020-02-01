@@ -9,6 +9,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import {Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis} from "recharts";
+import Typography from '@material-ui/core/Typography';
 
 
 class DiscreteDistribution extends React.Component {
@@ -53,8 +54,15 @@ class DiscreteDistribution extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <div style={{paddingLeft: 80, paddingTop: 30, width: '100%'}}>
-                    <form className={classes.form_root} noValidate autoComplete="off">
+                <Typography style={{paddingLeft: 75, paddingTop: 20}}
+                            variant="h4"
+                            color="textPrimary"
+                            noWrap>
+                    {this.props.name}
+                </Typography>
+                <div>
+                    <form style={{paddingLeft: 70, paddingTop: 20}}
+                          className={classes.form_root} noValidate autoComplete="off">
                         {this.props.defaultParams.map(param =>
                             <TextField key={param.name}
                                        id={param.name} type="number"
@@ -67,7 +75,8 @@ class DiscreteDistribution extends React.Component {
                             />
                         )}
                         <br/>
-                        <Button variant="contained"
+                        <Button style={{width: 100}}
+                                variant="contained"
                                 onClick={() => this.drawChart()}
                                 disabled={!this.isAllParamValid()}>Calculate</Button>
                     </form>

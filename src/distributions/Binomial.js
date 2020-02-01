@@ -24,7 +24,8 @@ class BinomialFromDiscrComponent extends React.Component {
             <DiscreteDistribution
                 defaultParams={[new ComponentDistributionParam("p", "Probability of success in one trial", 0.5, 0, 1),
                     new ComponentDistributionParam("n", "Num of trials", 10, 0)]}
-                makePmfArray={this.makePmf}/>
+                makePmfArray={this.makePmf}
+                name='Binomial'/>
         )
     }
 }

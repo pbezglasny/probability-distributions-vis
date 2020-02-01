@@ -38,7 +38,7 @@ const styles = theme => ({
         paddingLeft: theme.spacing(4),
     },
     list: {
-        width: 250,
+        width: 350,
     },
     fullList: {
         width: 'auto',
@@ -63,7 +63,7 @@ class App extends React.Component {
         this.state = {
             currentGraph: 'binom',
             sideOpen: false,
-            discrete: false
+            discrete: true
         };
         this.handleSelectDistribution = this.handleSelectDistribution.bind(this);
         this.toggleDrawer = this.toggleDrawer.bind(this);
