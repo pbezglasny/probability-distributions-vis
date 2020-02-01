@@ -11,10 +11,10 @@ class BinomialFromDiscrComponent extends React.Component {
         const p = params['p'].value;
         const n = params['n'].value;
         for (let k = 1; k <= n; k++) {
-            let choose = nChooseK(n, k);
-            let binProb = choose * Math.pow(p, k) *
+            const choose = nChooseK(n, k);
+            const prob = choose * Math.pow(p, k) *
                 Math.pow(1 - p, n - k);
-            pmf.push({'name': k.toString(), 'prob': binProb});
+            pmf.push({'name': k.toString(), 'prob': prob});
         }
         return pmf;
     }

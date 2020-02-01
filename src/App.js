@@ -12,11 +12,11 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
-
+import Geometric from "./distributions/Geometric";
 
 const distrMap = {
     'binom': <Binomial/>,
-    'bernoulli': <p/>
+    'geom': <Geometric/>
 };
 
 const styles = theme => ({
@@ -93,8 +93,8 @@ class App extends React.Component {
                                     <ListItemText primary="Binomial"/>
                                 </ListItem>
                                 <ListItem button className={classes.nested}
-                                          onClick={(_) => this.handleSelectDistribution('bernoulli')}>
-                                    <ListItemText primary="Bernoulli"/>
+                                          onClick={(_) => this.handleSelectDistribution('geom')}>
+                                    <ListItemText primary="Geometric"/>
                                 </ListItem>
                             </List>
                         </Collapse>

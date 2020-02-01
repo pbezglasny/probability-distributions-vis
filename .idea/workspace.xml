@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/distributions/discrete-distribution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/distributions/Geometric.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/distributions/Binomial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/Binomial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dist-param.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dist-param.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/grid-styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/grid-styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/distribution-math.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/distribution-math.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <workItem from="1579033903564" duration="2051000" />
       <workItem from="1580409680498" duration="7117000" />
       <workItem from="1580460741496" duration="9482000" />
-      <workItem from="1580497261018" duration="21712000" />
+      <workItem from="1580497261018" duration="23527000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1579034672187</created>
@@ -167,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580565464019</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created discrete distribution component.">
+      <created>1580578295373</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580578295373</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +189,8 @@
     <MESSAGE value="Added validation to input." />
     <MESSAGE value="Added grid." />
     <MESSAGE value="Added names of graphs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added names of graphs." />
+    <MESSAGE value="Created discrete distribution component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created discrete distribution component." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="281" width="691" height="561" key="#com.intellij.ide.util.MemberChooser" timestamp="1580574954280">
@@ -200,10 +206,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1580578176570" />
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580578278512">
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580578295165">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580578278512" />
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580578295165" />
     <state x="2798" y="329" width="860" height="807" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1579034672123" />
     <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580552101731">
       <screen x="0" y="0" width="1440" height="900" />
@@ -273,10 +279,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2530" y="238" width="1422" height="883" key="SettingsEditor/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580416793308" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1580577686715">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1580579229631">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1580577686715" />
+    <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1580579229631" />
     <state width="498" height="446" key="SwitcherDM/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580414151378" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580565468619">
       <screen x="0" y="0" width="1440" height="900" />
@@ -295,17 +301,5 @@
     </state>
     <state x="385" y="189" width="670" height="740" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1580576282948" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1580469282911" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/distributions/Binomial.js</url>
-          <line>28</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
