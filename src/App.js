@@ -13,10 +13,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Geometric from "./distributions/Geometric";
+import NegativeBinomial from "./distributions/NegativeBinomial";
 
 const distrMap = {
-    'binom': <Binomial/>,
-    'geom': <Geometric/>
+    'binom': {name: 'Binomial', jcx: <Binomial/>},
+    'geom': {name: 'Geometric', jcx: <Geometric/>},
+    'negative_binom': {name: 'Negative Binomial', jcx: <NegativeBinomial/>}
 };
 
 const styles = theme => ({
@@ -88,14 +90,12 @@ class App extends React.Component {
                         </ListItem>
                         <Collapse in={this.state.discrete} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}
-                                          onClick={(_) => this.handleSelectDistribution('binom')}>
-                                    <ListItemText primary="Binomial"/>
-                                </ListItem>
-                                <ListItem button className={classes.nested}
-                                          onClick={(_) => this.handleSelectDistribution('geom')}>
-                                    <ListItemText primary="Geometric"/>
-                                </ListItem>
+                                {Object.keys(distrMap).map(distr =>
+                                    <ListItem key={distr} button className={classes.nested}
+                                              onClick={(_) => this.handleSelectDistribution(distr)}>
+                                        <ListItemText primary={distrMap[distr].name}/>
+                                    </ListItem>
+                                )}
                             </List>
                         </Collapse>
                     </div>
@@ -112,7 +112,7 @@ class App extends React.Component {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                {distrMap[this.state.currentGraph]}
+                {distrMap[this.state.currentGraph].jcx}
             </div>
         )
     }
