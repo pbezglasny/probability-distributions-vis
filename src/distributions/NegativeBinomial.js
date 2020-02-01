@@ -5,7 +5,7 @@ import {nChooseK} from "../utils/distribution-math";
 
 
 function probabilityOfOneTrial(k, p, r) {
-    return nChooseK(k + r + 1, k) * Math.pow((1 - p), r) * Math.pow(p, k);
+    return nChooseK(k + r - 1, k) * Math.pow((1 - p), r) * Math.pow(p, k);
 }
 
 class NegativeBinomial extends React.Component {
@@ -17,7 +17,7 @@ class NegativeBinomial extends React.Component {
         const pmf = [];
         let k = 0;
         let prob = probabilityOfOneTrial(k, p, r);
-        while (prob >= 1e-4) {
+        while (prob >= 1e-4 && k <= 500) {
             pmf.push({'name': k.toString(), 'prob': prob});
             k++;
             prob = probabilityOfOneTrial(k, p, r);
@@ -29,7 +29,7 @@ class NegativeBinomial extends React.Component {
         return (
             <DiscreteDistribution
                 defaultParams={[new ComponentDistributionParam("p", "Probability of success in one trial", 0.5, 0, 1),
-                    new ComponentDistributionParam("r", "Number of failures before success", 10, 0)]}
+                    new ComponentDistributionParam("r", "Number of failures until the experiment is stopped", 10, 0)]}
                 makePmfArray={this.makePmf}/>
         );
     }

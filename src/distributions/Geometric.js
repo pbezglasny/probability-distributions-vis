@@ -9,7 +9,7 @@ class Geometric extends React.Component {
         const pmf = [];
         let k = 0;
         let prob = Math.pow((1 - p), k) * p;
-        while (prob >= 1e-5) {
+        while (prob >= 1e-5 && k <= 500) {
             pmf.push({'name': k.toString(), 'prob': prob});
             k++;
             prob = Math.pow((1 - p), k) * p;
