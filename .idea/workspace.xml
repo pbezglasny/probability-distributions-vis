@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/form-styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dist-param.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/distributions/Binomial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/Binomial.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +86,7 @@
       <workItem from="1579033903564" duration="2051000" />
       <workItem from="1580409680498" duration="7117000" />
       <workItem from="1580460741496" duration="9482000" />
-      <workItem from="1580497261018" duration="8667000" />
+      <workItem from="1580497261018" duration="12904000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1579034672187</created>
@@ -138,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580509771763</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change bootstrap lib to material in binomial.js, uninstall bootstrap.">
+      <created>1580554022704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580554022704</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +157,8 @@
     <MESSAGE value="Added nav bar." />
     <MESSAGE value="Change form to bootstrap." />
     <MESSAGE value="Change bootstrap lib to material in app.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change bootstrap lib to material in app.js" />
+    <MESSAGE value="Change bootstrap lib to material in binomial.js, uninstall bootstrap." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change bootstrap lib to material in binomial.js, uninstall bootstrap." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="281" width="691" height="561" key="#com.intellij.ide.util.MemberChooser" timestamp="1580470482186">
@@ -167,10 +174,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1580498526495" />
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580509771401">
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580554022482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580509771401" />
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580554022482" />
     <state x="2798" y="329" width="860" height="807" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1579034672123" />
     <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580552101731">
       <screen x="0" y="0" width="1440" height="900" />
@@ -240,15 +247,15 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2530" y="238" width="1422" height="883" key="SettingsEditor/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580416793308" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1580553046412">
+    <state width="500" height="400" key="SwitcherDM" timestamp="1580560820474">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1580553046412" />
+    <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1580560820474" />
     <state width="498" height="446" key="SwitcherDM/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580414151378" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580509776169">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580554026540">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580509776169" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580554026540" />
     <state x="3001" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580411555049">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
