@@ -1,4 +1,4 @@
-const grid_styles = theme => ({
+const gridStyles = _ => ({
     grid_root: {
         flexGrow: 1,
     },
@@ -7,4 +7,4 @@ const grid_styles = theme => ({
     }
 });
 
-export {grid_styles}
+export {gridStyles}

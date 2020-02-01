@@ -25,4 +25,20 @@ class DistributionParam {
 
 }
 
-export default DistributionParam
+class ComponentDistributionParam {
+    name;
+    description;
+    defaultValue;
+    min;
+    max;
+
+    constructor(name, description, defaultValue, min, max) {
+        this.name = name;
+        this.description = description;
+        this.defaultValue = defaultValue;
+        this.min = min;
+        this.max = max;
+    }
+}
+
+export {DistributionParam, ComponentDistributionParam}

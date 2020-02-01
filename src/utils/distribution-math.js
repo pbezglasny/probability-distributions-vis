@@ -1,4 +1,4 @@
-function make_cdf_from_pmf(pmf) {
+function makeCdfFromPmf(pmf) {
     const cdf = [];
     let sum = 0;
     for (let i = 0; i < pmf.length; i++) {
@@ -8,4 +8,15 @@ function make_cdf_from_pmf(pmf) {
     return cdf;
 }
 
-export {make_cdf_from_pmf}
+function nChooseK(n, k) {
+    let res = 1;
+    if (k > n - k)
+        k = n - k;
+    for (let i = 0; i < k; ++i) {
+        res *= (n - i);
+        res /= (i + 1);
+    }
+    return res;
+}
+
+export {makeCdfFromPmf, nChooseK}
