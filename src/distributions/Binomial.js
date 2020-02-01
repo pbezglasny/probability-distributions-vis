@@ -94,7 +94,13 @@ class Binomial extends React.Component {
                     </form>
                 </div>
                 <div className={classes.grid_root}>
-                    <Grid container spacing={1}>
+                    <Grid container spacing={0} alignContent="center">
+                        <Grid item xs={6}>
+                            <div className={classes.grid_names}>PMF</div>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <div className={classes.grid_names}>CDF</div>
+                        </Grid>
                         <Grid item xs={6}>
                             <BarChart width={600} height={300} data={this.state.pmf}
                                       margin={{top: 5, right: 30, left: 20, bottom: 5}}>
