@@ -14,6 +14,9 @@ import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Geometric from "./distributions/Geometric";
 import NegativeBinomial from "./distributions/NegativeBinomial";
+import {ThemeProvider} from "@material-ui/core/styles";
+import {createMuiTheme} from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
 
 const distrMap = {
     'binom': {name: 'Binomial', jcx: <Binomial/>},
@@ -40,6 +43,16 @@ const styles = theme => ({
     fullList: {
         width: 'auto',
     }
+});
+
+
+const theme = createMuiTheme({
+    palette: {
+        primary: blue,
+        secondary: {
+            main: '#009688',
+        },
+    },
 });
 
 class App extends React.Component {
@@ -79,39 +92,41 @@ class App extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Drawer anchor="left"
-                        open={this.state.sideOpen}
-                        onClose={this.toggleDrawer}>
-                    <div role="presentation"
-                         className={classes.list}>
-                        <ListItem button onClick={this.collapseDiscrete}>
-                            <ListItemText primary="Discrete"/>
-                            {this.state.discrete ? <ExpandLess/> : <ExpandMore/>}
-                        </ListItem>
-                        <Collapse in={this.state.discrete} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                {Object.keys(distrMap).map(distr =>
-                                    <ListItem key={distr} button className={classes.nested}
-                                              onClick={(_) => this.handleSelectDistribution(distr)}>
-                                        <ListItemText primary={distrMap[distr].name}/>
-                                    </ListItem>
-                                )}
-                            </List>
-                        </Collapse>
-                    </div>
-                </Drawer>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton edge="start" className={classes.menuButton}
-                                    color="inherit" aria-label="menu"
-                                    onClick={this.toggleDrawer}>
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant="h6" className={classes.title}>
-                            Statistics and probability
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
+                <ThemeProvider theme={theme}>
+                    <Drawer anchor="left"
+                            open={this.state.sideOpen}
+                            onClose={this.toggleDrawer}>
+                        <div role="presentation"
+                             className={classes.list}>
+                            <ListItem button onClick={this.collapseDiscrete}>
+                                <ListItemText primary="Discrete"/>
+                                {this.state.discrete ? <ExpandLess/> : <ExpandMore/>}
+                            </ListItem>
+                            <Collapse in={this.state.discrete} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    {Object.keys(distrMap).map(distr =>
+                                        <ListItem key={distr} button className={classes.nested}
+                                                  onClick={(_) => this.handleSelectDistribution(distr)}>
+                                            <ListItemText primary={distrMap[distr].name}/>
+                                        </ListItem>
+                                    )}
+                                </List>
+                            </Collapse>
+                        </div>
+                    </Drawer>
+                    <AppBar position="static">
+                        <Toolbar>
+                            <IconButton edge="start" className={classes.menuButton}
+                                        color="inherit" aria-label="menu"
+                                        onClick={this.toggleDrawer}>
+                                <MenuIcon/>
+                            </IconButton>
+                            <Typography variant="h6" className={classes.title}>
+                                Statistics and probability
+                            </Typography>
+                        </Toolbar>
+                    </AppBar>
+                </ThemeProvider>
                 {distrMap[this.state.currentGraph].jcx}
             </div>
         )

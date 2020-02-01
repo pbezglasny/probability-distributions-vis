@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="04249bfc-c4b5-485a-ba67-28c30c97e789" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/distributions/Geometric.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/Geometric.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/distributions/NegativeBinomial.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/NegativeBinomial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/distributions/discrete-distribution.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/distributions/discrete-distribution.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <workItem from="1579033903564" duration="2051000" />
       <workItem from="1580409680498" duration="7117000" />
       <workItem from="1580460741496" duration="9482000" />
-      <workItem from="1580497261018" duration="27627000" />
+      <workItem from="1580497261018" duration="28585000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1579034672187</created>
@@ -185,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580583022895</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix negative binomial distr.">
+      <created>1580591175984</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580591175985</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +212,8 @@
     <MESSAGE value="Created discrete distribution component." />
     <MESSAGE value="Added geometric distribution." />
     <MESSAGE value="Added negative binomial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added negative binomial." />
+    <MESSAGE value="Fix negative binomial distr." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix negative binomial distr." />
   </component>
   <component name="WindowStateProjectService">
     <state x="355" y="224" width="917" height="621" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1580580680286">
@@ -225,27 +233,27 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1580578176570" />
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580583022660">
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2" timestamp="1580591175813">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580583022660" />
+    <state x="261" y="206" width="997" height="505" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1580591175813" />
     <state x="2798" y="329" width="860" height="807" key="CommitChangelistDialog2/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1579034672123" />
-    <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580552101731">
+    <state width="1419" height="239" key="GridCell.Tab.0.bottom" timestamp="1580592084328">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580552101731" />
-    <state width="1419" height="239" key="GridCell.Tab.0.center" timestamp="1580552101729">
+    <state width="1419" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580592084328" />
+    <state width="1419" height="239" key="GridCell.Tab.0.center" timestamp="1580592084326">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580552101729" />
-    <state width="1419" height="239" key="GridCell.Tab.0.left" timestamp="1580552101728">
+    <state width="1419" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580592084326" />
+    <state width="1419" height="239" key="GridCell.Tab.0.left" timestamp="1580592084325">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580552101728" />
-    <state width="1419" height="239" key="GridCell.Tab.0.right" timestamp="1580552101730">
+    <state width="1419" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580592084325" />
+    <state width="1419" height="239" key="GridCell.Tab.0.right" timestamp="1580592084327">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580552101730" />
+    <state width="1419" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580592084327" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1580501543930">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -303,10 +311,10 @@
     </state>
     <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1580579229631" />
     <state width="498" height="446" key="SwitcherDM/1920.0.2560.1440/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1440" timestamp="1580414151378" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580583024951">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1580591178729">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580583024951" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1580591178729" />
     <state x="3001" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580411555049">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>

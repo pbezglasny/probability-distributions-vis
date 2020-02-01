@@ -86,7 +86,7 @@ class DiscreteDistribution extends React.Component {
                                 <XAxis dataKey="name"/>
                                 <YAxis/>
                                 <Tooltip/>
-                                <Bar dataKey="prob" name="Probability" fill="#8884d8"/>
+                                <Bar dataKey="prob" name="Probability" fill="#009688"/>
                             </BarChart>
                         </Grid>
                         <Grid item xs={6}>
@@ -96,7 +96,7 @@ class DiscreteDistribution extends React.Component {
                                 <XAxis dataKey="name"/>
                                 <YAxis/>
                                 <Tooltip/>
-                                <Bar dataKey="prob" name="Probability" fill="#8884d8"/>
+                                <Bar dataKey="prob" name="Probability" fill="#009688"/>
                             </BarChart>
                         </Grid>
                     </Grid>
