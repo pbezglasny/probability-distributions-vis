@@ -122,7 +122,7 @@ class App extends React.Component {
                                 <MenuIcon/>
                             </IconButton>
                             <Typography variant="h6" className={classes.title}>
-                                Statistics and probability
+                                Probability distributions
                             </Typography>
                         </Toolbar>
                     </AppBar>
