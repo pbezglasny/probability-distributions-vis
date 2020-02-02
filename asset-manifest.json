@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/probability-distributions-vis/static/css/main.d4d7b5f6.chunk.css",
+    "main.js": "/probability-distributions-vis/static/js/main.3c7c9120.chunk.js",
+    "main.js.map": "/probability-distributions-vis/static/js/main.3c7c9120.chunk.js.map",
+    "runtime-main.js": "/probability-distributions-vis/static/js/runtime-main.a63d3e38.js",
+    "runtime-main.js.map": "/probability-distributions-vis/static/js/runtime-main.a63d3e38.js.map",
+    "static/js/2.0af57e4c.chunk.js": "/probability-distributions-vis/static/js/2.0af57e4c.chunk.js",
+    "static/js/2.0af57e4c.chunk.js.map": "/probability-distributions-vis/static/js/2.0af57e4c.chunk.js.map",
+    "index.html": "/probability-distributions-vis/index.html",
+    "precache-manifest.93a8afc7da9077293af0cdb31d2d7409.js": "/probability-distributions-vis/precache-manifest.93a8afc7da9077293af0cdb31d2d7409.js",
+    "service-worker.js": "/probability-distributions-vis/service-worker.js",
+    "static/css/main.d4d7b5f6.chunk.css.map": "/probability-distributions-vis/static/css/main.d4d7b5f6.chunk.css.map",
+    "static/js/2.0af57e4c.chunk.js.LICENSE": "/probability-distributions-vis/static/js/2.0af57e4c.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a63d3e38.js",
+    "static/js/2.0af57e4c.chunk.js",
+    "static/css/main.d4d7b5f6.chunk.css",
+    "static/js/main.3c7c9120.chunk.js"
+  ]
+}
