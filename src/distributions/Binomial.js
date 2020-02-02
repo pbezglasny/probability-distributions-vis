@@ -4,7 +4,7 @@ import {ComponentDistributionParam} from "../model/dist-param";
 import binomial from "../statistics/discrete/binomial"
 
 
-class BinomialFromDiscrComponent extends React.Component {
+class Binomial extends React.Component {
 
     makePmf(params) {
         const result = [];
@@ -50,4 +50,4 @@ class BinomialFromDiscrComponent extends React.Component {
     }
 }
 
-export default BinomialFromDiscrComponent
+export default Binomial

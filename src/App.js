@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {withStyles} from '@material-ui/core/styles';
+import {createMuiTheme, ThemeProvider, withStyles} from '@material-ui/core/styles';
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -14,14 +14,14 @@ import Collapse from "@material-ui/core/Collapse";
 import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Geometric from "./distributions/Geometric";
 import NegativeBinomial from "./distributions/NegativeBinomial";
-import {ThemeProvider} from "@material-ui/core/styles";
-import {createMuiTheme} from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
+import Poisson from "./distributions/Poisson";
 
 const distrMap = {
     'binom': {name: 'Binomial', jcx: <Binomial/>},
     'geom': {name: 'Geometric', jcx: <Geometric/>},
-    'negative_binom': {name: 'Negative Binomial', jcx: <NegativeBinomial/>}
+    'negative_binom': {name: 'Negative Binomial', jcx: <NegativeBinomial/>},
+    'poisson': {name: 'Poisson', jcx: <Poisson/>}
 };
 
 const styles = theme => ({

@@ -19,8 +19,6 @@ class geometric {
     static std(n, p) {
         return Math.sqrt(this.var(n, p));
     }
-
-
 }
 
 export default geometric;
