@@ -3,7 +3,7 @@ import {formStyles} from "../styles/form-styles";
 import {withStyles} from '@material-ui/core/styles';
 import combineStyles from "../styles/combine-styles";
 import {gridStyles} from "../styles/grid-styles";
-import {makeCdfFromPmf} from "../utils/distribution-math";
+import {makeCdfFromPmf} from "../statistics/distribution-math";
 import {DistributionParam} from "../model/dist-param";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -20,8 +20,24 @@ class DiscreteDistribution extends React.Component {
         for (const param of props.defaultParams) {
             paramsMap[param.name] = new DistributionParam(param.name, param.defaultValue, param.min, param.max)
         }
-        this.state = {params: paramsMap, pmf: [], cdf: []};
+        this.state = {
+            params: paramsMap,
+            mean: 0,
+            variance: 0,
+            std: 0,
+            pmf: [],
+            cdf: []
+        };
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    updateStatistics() {
+        const newMean = this.props.mean(this.state.params);
+        this.setState({mean: newMean});
+        const newVariance = this.props.variance(this.state.params);
+        this.setState({variance: newVariance});
+        const newStd = this.props.std(this.state.params);
+        this.setState({std: newStd});
     }
 
     handleChange(event) {
@@ -33,6 +49,7 @@ class DiscreteDistribution extends React.Component {
     }
 
     componentDidMount() {
+        this.updateStatistics();
         this.drawChart();
     }
 
@@ -45,6 +62,7 @@ class DiscreteDistribution extends React.Component {
         if (!this.isAllParamValid()) {
             return;
         }
+        this.updateStatistics();
         const pmf = this.props.makePmfArray(this.state.params);
         const cdf = makeCdfFromPmf(pmf);
         this.setState({pmf: pmf, cdf: cdf});
@@ -96,7 +114,7 @@ class DiscreteDistribution extends React.Component {
                                 <XAxis dataKey="name"/>
                                 <YAxis/>
                                 <Tooltip/>
-                                <Bar dataKey="prob" name="Probability" fill="#009688"/>
+                                <Bar dataKey="prob" name="P(X=x)" fill="#009688"/>
                             </BarChart>
                         </Grid>
                         <Grid item xs={6}>
@@ -106,8 +124,25 @@ class DiscreteDistribution extends React.Component {
                                 <XAxis dataKey="name"/>
                                 <YAxis/>
                                 <Tooltip/>
-                                <Bar dataKey="prob" name="Probability" fill="#009688"/>
+                                <Bar dataKey="prob" name="P(X<=x)" fill="#009688"/>
                             </BarChart>
+                        </Grid>
+                        <Grid item xs={3} style={{paddingLeft: 70}}>
+                            <TextField key="mean" id="mean"
+                                       value={this.state.mean} label="Mean"
+                                       inputProps={{readOnly: true}}/>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <TextField key="mean" id="mean"
+                                       value={this.state.variance}
+                                       label="Variance"
+                                       inputProps={{readOnly: true}}/>
+                        </Grid>
+                        <Grid item xs={3}>
+                            <TextField key="std" id="std"
+                                       value={this.state.std}
+                                       label="Standard deviation"
+                                       inputProps={{readOnly: true}}/>
                         </Grid>
                     </Grid>
                 </div>

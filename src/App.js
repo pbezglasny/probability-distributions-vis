@@ -73,7 +73,7 @@ class App extends React.Component {
     handleSelectDistribution(id) {
         this.setState({currentGraph: id});
         this.toggleDrawer();
-        this.collapseDiscrete();
+        // this.collapseDiscrete();
     }
 
     collapseDiscrete() {
