@@ -19,7 +19,7 @@ class negative_binomial {
     }
 
     static std(p, r) {
-        return Math.sqrt(this.var(p, r));
+        return Math.sqrt(negative_binomial.var(p, r));
     }
 }
 

@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^6.12.2",
     "gh-pages": "^2.2.0"
   }
 }

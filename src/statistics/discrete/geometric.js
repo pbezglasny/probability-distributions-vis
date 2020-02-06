@@ -17,7 +17,7 @@ class geometric {
     }
 
     static std(n, p) {
-        return Math.sqrt(this.var(n, p));
+        return Math.sqrt(geometric.var(n, p));
     }
 }
 

@@ -19,7 +19,7 @@ class poisson {
     }
 
     static std(lambda) {
-        return Math.sqrt(this.var(lambda));
+        return Math.sqrt(poisson.var(lambda));
     }
 }
 

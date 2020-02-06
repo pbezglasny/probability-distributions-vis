@@ -46,4 +46,16 @@ function cachedFactorial(k) {
     return factorialCache[k];
 }
 
-export {makeCdfFromPmf, nChooseK, factorial, cachedFactorial}
+function findUpperBoundOfContinuousCDF(distributionFunc, start = 0, threshold = 1e-4) {
+    let right = start;
+    while (distributionFunc(right) < 1 - threshold) right = right * 2;
+    let left = right / 2;
+    while (left < right && (right - left) > threshold) {
+        const middle = (left + right) / 2;
+        if (distributionFunc(middle) >= 1 - threshold) right = middle;
+        else left = middle;
+    }
+    return left;
+}
+
+export {makeCdfFromPmf, nChooseK, factorial, cachedFactorial, findUpperBoundOfContinuousCDF}
